@@ -1,0 +1,52 @@
+﻿@model RegisterModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Зарегистрироваться</title>
+</head>
+<body class="page_main">
+    <div class="validation" asp-validation-summary="ModelOnly"></div>
+    <form asp-action="Register" asp-controller="User" asp-anti-forgery="true">
+        <table>
+            <tr>
+                <td><label asp-for="Login"></label></td>
+                <td><input asp-for="Login"></td>
+                <td><span asp-validation-for="Login" class="text-danger"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Password"></label></td>
+                <td><input asp-for="Password"></td>
+                <td><span asp-validation-for="Password" class="text-danger"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="FirstName"></label></td>
+                <td><input asp-for="FirstName"></td>
+                <td><span asp-validation-for="FirstName" class="text-danger"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="LastName"></label></td>
+                <td><input asp-for="LastName"></td>
+                <td><span asp-validation-for="LastName" class="text-danger"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="MiddleName"></label></td>
+                <td><input asp-for="MiddleName"></td>
+                <td><span asp-validation-for="MiddleName" class="text-danger"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Age"></label></td>
+                <td><input asp-for="Age"></td>
+                <td><span asp-validation-for="Age" class="text-danger"></span></td>
+            </tr>
+        </table>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+</body>
+</html>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
